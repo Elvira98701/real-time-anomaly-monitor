@@ -1,0 +1,34 @@
+@use "@/shared/styles/mixins" as *;
+@use "@/shared/styles/functions" as *;
+
+.home {
+  min-height: 100vh;
+  @include flex-center;
+
+  &Inner {
+    @include flex-center;
+    gap: rem(60);
+    background-color: var(--color-light);
+    border-radius: var(--border-radius-lg);
+    padding: rem(50);
+    box-shadow: var(--shadow);
+  }
+
+  &Title {
+    font-size: 70px;
+    margin-bottom: rem(20);
+    text-transform: capitalize;
+  }
+
+  &Link {
+    padding-inline: rem(30);
+    padding-block: rem(10);
+    background-color: var(--color-primary);
+    border-radius: var(--border-radius);
+    color: var(--color-light);
+
+    &:hover {
+      scale: 1.05;
+    }
+  }
+}

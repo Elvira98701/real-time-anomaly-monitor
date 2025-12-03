@@ -1,0 +1,27 @@
+@use "@/shared/styles/functions" as *;
+
+:root {
+  --color-light: #ffffff;
+
+  --color-gray-900: #0d0e11;
+  --color-gray-700: #787a80;
+  --color-gray-400: #d7d9e4;
+  --color-gray-300: #f5f5f7;
+
+  --color-danger: #ff4242;
+  --color-primary: #271f47;
+
+  --border: #{rem(1)} solid var(--color-gray-400);
+  --border-radius: #{rem(10)};
+  --border-radius-lg: #{rem(20)};
+
+  --shadow: 0 80px 80px -20px rgba(154, 156, 165, 0.08),
+    0 30px 24px -10px rgba(154, 156, 165, 0.05),
+    0 12px 10px -6px rgba(154, 156, 165, 0.04),
+    0 4px 4px -4px rgba(30, 33, 44, 0.03);
+
+  --container-width: #{rem(1400)};
+  --container-padding-x: #{rem(20)};
+
+  --transition-duration: 0.3s;
+}

@@ -1,0 +1,11 @@
+@use "@/shared/styles/functions" as *;
+
+.monitoring {
+  padding-block: rem(50);
+
+  &Title {
+    font-size: rem(60);
+    margin-bottom: rem(30);
+    text-transform: capitalize;
+  }
+}
