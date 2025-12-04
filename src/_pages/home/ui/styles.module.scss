@@ -12,10 +12,23 @@
     border-radius: var(--border-radius-lg);
     padding: rem(50);
     box-shadow: var(--shadow);
+
+    @media (max-width: 1200px) {
+      gap: rem(30);
+    }
+
+    @media (max-width: 900px) {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+  }
+
+  &Content {
+    flex: 1;
   }
 
   &Title {
-    font-size: 70px;
+    font-size: clamp(2.5rem, 2.125rem + 1.88vw, 4.375rem);
     margin-bottom: rem(20);
     text-transform: capitalize;
   }

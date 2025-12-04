@@ -4,7 +4,7 @@
   padding-block: rem(50);
 
   &Title {
-    font-size: rem(60);
+    font-size: clamp(1.875rem, 1.5rem + 1.88vw, 3.75rem);
     margin-bottom: rem(30);
     text-transform: capitalize;
   }
