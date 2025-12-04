@@ -1,6 +1,6 @@
-# real-time-anomaly-monitor
+# real-time-anomaly-monitor (Тестовое задание)
 
-## How to run
+## Установка и запуск
 
 ```bash
 git clone https://github.com/Elvira98701/real-time-anomaly-monitor.git
