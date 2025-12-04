@@ -1,1 +1,1 @@
-export { useSpiritsStream } from "./model/useSpiritsStream";
+export { useSpiritsStream } from "./api/useSpiritsStream";

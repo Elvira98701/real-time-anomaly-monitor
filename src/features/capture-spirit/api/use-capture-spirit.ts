@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 import { Spirit } from "@/entities/spirit";
 import { QUERY_KEYS } from "@/shared/constants";
 
-import { captureSpirit } from "../api/capture-spirit";
+import { captureSpirit } from "./capture-spirit";
 
 export const useCaptureSpirit = (id: string) => {
   const queryClient = useQueryClient();

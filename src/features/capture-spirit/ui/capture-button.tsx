@@ -2,7 +2,7 @@
 
 import clsx from "clsx";
 
-import { useCaptureSpirit } from "../model/use-capture-spirit";
+import { useCaptureSpirit } from "../api/use-capture-spirit";
 
 import styles from "./styles.module.scss";
 
