@@ -1,5 +1,5 @@
-import { SpiritsList } from "@/features/spirits-list";
 import { Container } from "@/shared/ui";
+import { SpiritsList } from "@/widgets/spirits-list";
 
 import styles from "./styles.module.scss";
 

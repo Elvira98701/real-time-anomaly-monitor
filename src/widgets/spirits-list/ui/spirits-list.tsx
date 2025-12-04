@@ -2,9 +2,9 @@
 
 import clsx from "clsx";
 
-import { SpiritCard } from "@/entities/spirit";
-
-import { useGetSpirits } from "../api/use-get-spirits";
+import { SpiritCard, useGetSpirits } from "@/entities/spirit";
+import { CaptureButton } from "@/features/capture-spirit";
+import { ErrorText } from "@/shared/ui";
 
 import styles from "./styles.module.scss";
 
@@ -16,17 +16,21 @@ export const SpiritsList = ({ className }: SpiritsListProps) => {
   const { data, isLoading, isError, error } = useGetSpirits();
 
   if (isLoading) {
-    return <p>Loading</p>;
+    return <p>Loading...</p>;
   }
 
   if (isError) {
-    return <p>{error.message}</p>;
+    return <ErrorText text={error.message} />;
   }
 
   return (
     <div className={clsx(styles.spirits, className)}>
       {data?.map((spirit) => (
-        <SpiritCard key={spirit.id} spirit={spirit} />
+        <SpiritCard key={spirit.id} spirit={spirit}>
+          <CaptureButton disabled={spirit.status === "Captured"}>
+            Capture
+          </CaptureButton>
+        </SpiritCard>
       ))}
     </div>
   );

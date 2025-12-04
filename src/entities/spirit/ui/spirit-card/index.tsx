@@ -6,11 +6,16 @@ import { Spirit } from "../../model/schema";
 import styles from "./styles.module.scss";
 
 interface SpiritCardProps {
+  children?: React.ReactNode;
   spirit: Spirit;
   className?: string;
 }
 
-export const SpiritCard = ({ spirit, className }: SpiritCardProps) => {
+export const SpiritCard = ({
+  children,
+  spirit,
+  className,
+}: SpiritCardProps) => {
   return (
     <div className={clsx(styles.card, className)}>
       <Image
@@ -47,6 +52,7 @@ export const SpiritCard = ({ spirit, className }: SpiritCardProps) => {
             {spirit.status}
           </span>
         </div>
+        {children}
       </div>
     </div>
   );
