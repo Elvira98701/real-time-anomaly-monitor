@@ -3,14 +3,13 @@ import clsx from "clsx";
 import styles from "./styles.module.scss";
 
 interface CaptureButtonProps {
-  children: React.ReactNode;
   disabled?: boolean;
   className?: string;
 }
 
 export const CaptureButton = ({
   disabled = false,
-  children,
+
   className,
 }: CaptureButtonProps) => {
   return (
@@ -19,7 +18,7 @@ export const CaptureButton = ({
       type="button"
       disabled={disabled}
     >
-      {children}
+      Capture
     </button>
   );
 };

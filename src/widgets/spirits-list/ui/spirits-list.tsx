@@ -26,11 +26,11 @@ export const SpiritsList = ({ className }: SpiritsListProps) => {
   return (
     <div className={clsx(styles.spirits, className)}>
       {data?.map((spirit) => (
-        <SpiritCard key={spirit.id} spirit={spirit}>
-          <CaptureButton disabled={spirit.status === "Captured"}>
-            Capture
-          </CaptureButton>
-        </SpiritCard>
+        <SpiritCard
+          key={spirit.id}
+          spirit={spirit}
+          actions={<CaptureButton disabled={spirit.status === "Captured"} />}
+        />
       ))}
     </div>
   );
