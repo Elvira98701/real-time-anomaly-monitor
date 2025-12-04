@@ -1,4 +1,5 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
+import toast from "react-hot-toast";
 
 import { Spirit } from "@/entities/spirit";
 import { QUERY_KEYS } from "@/shared/constants";
@@ -29,6 +30,8 @@ export const useCaptureSpirit = (id: string) => {
       if (context?.previousSpirits) {
         queryClient.setQueryData([QUERY_KEYS.SPIRITS], context.previousSpirits);
       }
+
+      toast.error("Oops... The spirit capture error");
     },
 
     onSettled: () =>

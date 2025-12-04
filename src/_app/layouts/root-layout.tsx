@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import { Toaster } from "react-hot-toast";
 
 import { inter } from "@/shared/config";
 
 import { ReactQueryProvider } from "../providers";
+
 import "../styles/index.scss";
 
 export const metadata: Metadata = {
@@ -19,6 +21,13 @@ export const RootLayout = ({
     <html lang="en">
       <body className={`${inter.variable}`}>
         <ReactQueryProvider>{children}</ReactQueryProvider>
+        <Toaster
+          toastOptions={{
+            style: {
+              borderRadius: "20px",
+            },
+          }}
+        />
       </body>
     </html>
   );
