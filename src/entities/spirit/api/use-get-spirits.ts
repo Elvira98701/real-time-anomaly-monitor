@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Spirit } from "@/entities/spirit";
 import { QUERY_KEYS } from "@/shared/constants";
 
-import { getSpirits } from "../api/get-spirits";
+import { getSpirits } from "./get-spirits";
 
 export const useGetSpirits = () =>
   useQuery<Spirit[]>({
