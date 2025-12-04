@@ -4,6 +4,7 @@ import clsx from "clsx";
 
 import { SpiritCard, useGetSpirits } from "@/entities/spirit";
 import { CaptureButton } from "@/features/capture-spirit";
+import { useSpiritsStream } from "@/features/spirits-stream";
 import { ErrorText } from "@/shared/ui";
 
 import styles from "./styles.module.scss";
@@ -13,6 +14,8 @@ interface SpiritsListProps {
 }
 
 export const SpiritsList = ({ className }: SpiritsListProps) => {
+  useSpiritsStream();
+
   const { data, isLoading, isError, error } = useGetSpirits();
 
   if (isLoading) {
