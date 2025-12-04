@@ -29,7 +29,12 @@ export const SpiritsList = ({ className }: SpiritsListProps) => {
         <SpiritCard
           key={spirit.id}
           spirit={spirit}
-          actions={<CaptureButton disabled={spirit.status === "Captured"} />}
+          actions={
+            <CaptureButton
+              disabled={spirit.status === "Captured"}
+              id={spirit.id}
+            />
+          }
         />
       ))}
     </div>

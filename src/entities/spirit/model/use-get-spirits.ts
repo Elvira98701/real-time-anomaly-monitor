@@ -1,11 +1,12 @@
 import { useQuery } from "@tanstack/react-query";
 
 import { Spirit } from "@/entities/spirit";
+import { QUERY_KEYS } from "@/shared/constants";
 
-import { getSpirits } from "./get-spirits";
+import { getSpirits } from "../api/get-spirits";
 
 export const useGetSpirits = () =>
   useQuery<Spirit[]>({
-    queryKey: ["spirits"],
+    queryKey: [QUERY_KEYS.SPIRITS],
     queryFn: ({ signal }) => getSpirits({ signal }),
   });

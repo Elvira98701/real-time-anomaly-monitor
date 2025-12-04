@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-import { spirits } from "../../spirits.mock";
+import { spirits } from "../spirits.mock";
 
 export async function POST(
   req: NextRequest,
